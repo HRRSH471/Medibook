@@ -19,8 +19,8 @@ export default function Navbar() {
           <a href="/#how-it-works" className="text-sm text-slate-300 hover:text-white">How it works</a>
           <a href="/#services" className="text-sm text-slate-300 hover:text-white">Services</a>
           <a href="/#hospitals" className="text-sm text-slate-300 hover:text-white">Hospitals</a>
-          <Link to="/patient/register" className="rounded-xl bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-slate-950 hover:bg-emerald-400">
-            Find a Doctor
+          <Link to="/patient/appointment" className="rounded-xl bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-slate-950 hover:bg-emerald-400">
+            Book an Appointment
           </Link>
         </div>
 
