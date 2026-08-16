@@ -27,23 +27,43 @@ async function request(path, options = {}) {
 }
 
 export const api = {
+  // =================================
   // Hospitals
-  getHospitals: () => request("/hospitals"),
+  // =================================
 
+  getHospitals: () =>
+    request("/hospitals"),
+
+  // =================================
   // Doctors
-  getDoctors: () => request("/getDoctors"),
+  // =================================
 
-  // Patients
-  getPatients: () => request("/getPatients"),
+  getDoctors: () =>
+    request("/getDoctors"),
 
-  // Register Doctor
   registerDoctor: (payload) =>
     request("/doctorRegister", {
       method: "POST",
       body: JSON.stringify(payload),
     }),
 
+  // =================================
+  // Patients
+  // =================================
+
+  getPatients: () =>
+    request("/getPatients"),
+
+  registerPatient: (payload) =>
+    request("/patientRegister", {
+      method: "POST",
+      body: JSON.stringify(payload),
+    }),
+
+  // =================================
   // Appointments
+  // =================================
+
   bookAppointment: (payload) =>
     request("/appointments", {
       method: "POST",
