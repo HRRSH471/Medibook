@@ -11,11 +11,10 @@ async function request(path, options = {}) {
 
   const url = `${API_BASE_URL}${cleanPath}`;
 
-  console.log("[API REQUEST]", {
-    method: options.method || "GET",
-    url,
-  });
-
+  // console.log("[API REQUEST]", {
+  //   method: options.method || "GET",
+  //   url,
+  // });
   const response = await fetch(url, {
     headers: {
       "Content-Type": "application/json",
@@ -32,11 +31,11 @@ async function request(path, options = {}) {
     data = {};
   }
 
-  console.log("[API RESPONSE]", {
-    status: response.status,
-    url,
-    data,
-  });
+  // console.log("[API RESPONSE]", {
+  //   status: response.status,
+  //   url,
+  //   data,
+  // });
 
   if (!response.ok) {
     throw new Error(

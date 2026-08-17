@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "type": "cosmosDB",
+      "name": "appointmentDocument",
+      "databaseName": "MediBook",
+      "containerName": "doctors",
+      "connection": "COSMOS_CONNECTION_STRING",
+      "createIfNotExists": false,
+      "direction": "out"
+    },
+    {
+      "type": "http",
+      "name": "res",
+      "direction": "out"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "cosmosDB",
+      "name": "patients",
+      "direction": "in",
+      "databaseName": "MediBook",
+      "containerName": "patients",
+      "connection": "COSMOS_CONNECTION_STRING",
+      "sqlQuery": "SELECT * FROM c"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    }
+  ]
+}

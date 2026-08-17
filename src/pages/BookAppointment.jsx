@@ -1576,10 +1576,10 @@ async function safelyLoadList(
     const response =
       await apiFunction();
 
-    console.log(
-      `[BookAppointment] ${type} API response:`,
-      response
-    );
+    // console.log(
+    //   `[BookAppointment] ${type} API response:`,
+    //   response
+    // );
 
     const list = normalizeList(
       response,
